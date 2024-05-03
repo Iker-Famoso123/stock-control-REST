@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Control de stock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+        <div class="container mx-auto p-6">
+            <!-- Formulario de registro -->
+            <div class="mb-4">
+                <h1 class="text-2xl font-semibold mb-2">Registro de Productos de Inventario</h1>
+                <form>
+                    <div class="mb-4">
+                        <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-300">
+                    </div>
+                    <div class="mb-4">
+                        <label for="descripcion" class="block text-gray-700 font-bold mb-2">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="3" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-300"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="cantidad" class="block text-gray-700 font-bold mb-2">Cantidad:</label>
+                        <input type="number" id="cantidad" name="cantidad" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-300">
+                    </div>
+                    <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
+                </form>
+                <div class="mb-4">
+                    <label for="search" class="block text-gray-700 font-bold mb-2">Buscar por id:</label>
+                    <input type="number" id="search" name="search" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring focus:border-blue-300">
+                    <button type="button" onclick="findProduct()" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Tabla de productos registrados -->
+            <div>
+                <h2 class="text-xl font-semibold mb-2">Productos Registrados</h2>
+                <div class="overflow-x-auto">
+                    <table id="table-content" class="table-auto w-full border-collapse border border-gray-700">
+                        <thead>
+                        <tr>
+                            <th class="border border-gray-700 px-4 py-2">Id</th>
+                            <th class="border border-gray-700 px-4 py-2">Nombre</th>
+                            <th class="border border-gray-700 px-4 py-2">Descripción</th>
+                            <th class="border border-gray-700 px-4 py-2">Cantidad</th>
+                            <th class="border border-gray-700 px-4 py-2">Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        <!-- Aquí irán los datos de los productos registrados -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/index.js"></script>
+</html>
