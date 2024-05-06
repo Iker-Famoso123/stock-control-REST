@@ -20,7 +20,7 @@ public class productController {
 
     @PutMapping()
     public product editProduct(@RequestBody product product){
-        return service.saveProduct(product);
+        return service.editProduct(product);
     }
 
     @GetMapping()

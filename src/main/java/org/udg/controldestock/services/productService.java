@@ -26,6 +26,7 @@ public class productService {
 
     }
 
+
     public ArrayList<product> getAllProducts(){
         return (ArrayList<product>) repository.findAll();
     }
