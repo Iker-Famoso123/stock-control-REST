@@ -248,5 +248,7 @@ function productRegister(productName,productDescription,productQuantity) {
             console.error('Error:', error);
             // Handle error here
         });
+
+
 }
 
